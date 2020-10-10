@@ -27,8 +27,7 @@ public class Github_act extends AppCompatActivity {
         text = (TextView) findViewById(R.id.tv1);
         final Libro libro = new Libro();
 
-        String[] libros = {"Farenheit", "Revival", "El Alquimista"};
-
+        String[] libros = {"Farenheit", "Revival", "El Alquimista", "El Poder", "Despertar"};
         spin.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, libros));
 
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -42,6 +41,12 @@ public class Github_act extends AppCompatActivity {
                 }
                 if (spin.getSelectedItem().toString().equals("Farenheit")){
                     text.setText("El precio del libro " + spin.getSelectedItem().toString() + " es " + libro.getFarenheit() + "");
+                }
+                if (spin.getSelectedItem().toString().equals("El Poder")){
+                    text.setText("El precio del libro " + spin.getSelectedItem().toString() + " es " + libro.getElPoder() + "");
+                }
+                if (spin.getSelectedItem().toString().equals("Despertar")){
+                    text.setText("El precio del libro " + spin.getSelectedItem().toString() + " es " + libro.getDespertar() + "");
                 }
 
             }
